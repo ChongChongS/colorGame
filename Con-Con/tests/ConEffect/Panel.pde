@@ -5,8 +5,8 @@ class Panel {
 
   Panel() {
     position = new PVector(0, 0);
-    size     = new PVector(600, 810);
-    bgCol    = color(255,50);
+    size     = new PVector(600, 890);
+    bgCol    = color(255, 50);
 
     cp5.addToggle("showParticles")
       .setPosition(10, 10)
@@ -133,14 +133,27 @@ class Panel {
       .setPosition(120, 370)
       .setFont(createFont(" ", 15))
       ;
+
+    cp5.addToggle("strangeMode")
+      .setPosition(10, 410)
+      .setSize(20, 20)
+      .setValue(true)
+      ;
+
+    cp5.addTextlabel("label11")
+      .setText("you wanna play strange mode?")
+      .setPosition(40, 410)
+      .setFont(createFont(" ", 15))
+      ;
   }
 
   void draw() {
     noStroke();
     fill(bgCol);
     rect(position.x, position.y, size.x, size.y);
-    stroke(255,200);
+    stroke(255, 200);
     strokeWeight(1);
-    line(10,206,300,206);
+    line(10, 206, 300, 206);
+    line(10, 405, 300, 405);
   }
 }

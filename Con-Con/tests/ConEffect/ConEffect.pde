@@ -70,7 +70,10 @@ void setup() {
 }
 
 void draw() {
-  //blendMode(ADD);
+  if(strangeMode)
+    blendMode(ADD);
+  else
+    blendMode(BLEND);
   background(0);
   if(showPanel){
     cp5.setVisible(true);

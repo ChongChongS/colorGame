@@ -15,6 +15,7 @@ float rRadiusScale = 1.0;
 float rRadiusSpeed = 2.0;
 float rLifeSpeed = 8.0;
 boolean showPanel = true;
+boolean strangeMode = true;
 
 void keyPressed() {
   if (key == ' ') {

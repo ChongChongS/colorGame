@@ -9,30 +9,19 @@ boolean showParticles = true;
 boolean showParticles2 = true;
 boolean mouseReleased = false;
 ArrayList<ParticleSystem2> pss2;
+boolean colorOrFirework = true;
+PImage[] imgs;
+float rRadiusScale = 1.0;
+float rRadiusSpeed = 2.0;
+float rLifeSpeed = 8.0;
+boolean showPanel = true;
 
 void keyPressed() {
   if (key == ' ') {
     skeleton = !skeleton;
   }
-  if (key == 'w') {
-    println("up");
-    isup = !isup;
-  }
-  if (key == 'a') {
-    println("left");
-    isleft = !isleft;
-  }
-  if (key == 'd') {
-    println("right");
-    isright = !isright;
-  }
-  if (key == '1') {
-    println("show 1 or nor");
-    showParticles = !showParticles;
-  }
-  if (key == '2') {
-    println("show 2 or nor");
-    showParticles2 = !showParticles2;
+  if (key == 's') {
+    showPanel = !showPanel;
   }
 }
 

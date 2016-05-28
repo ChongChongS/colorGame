@@ -17,7 +17,6 @@ class Skeleton {
   float totalPoints; // How many points make up the blob
 
   ParticleSystem ps;
-  PImage[] imgs;
 
   // We should modify this constructor to receive arguments
   // So that we can make many different types of blobs
@@ -117,13 +116,6 @@ class Skeleton {
         joints.add(dj);
       }
     }
-
-    imgs = new PImage[5];
-    imgs[0] = loadImage("corona.png");
-    imgs[1] = loadImage("emitter.png");
-    imgs[2] = loadImage("particle.png");
-    imgs[3] = loadImage("texture.png");
-    imgs[4] = loadImage("reflection.png");
 
     ps = new ParticleSystem(imgs, new PVector(center.x, center.y));
   }

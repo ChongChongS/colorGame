@@ -39,7 +39,14 @@ void setup() {
   cp5 = new ControlP5(this);
   uiPanel = new Panel();
   pss2 = new ArrayList<ParticleSystem2>();
-  
+
+  imgs = new PImage[5];
+  imgs[0] = loadImage("corona.png");
+  imgs[1] = loadImage("emitter.png");
+  imgs[2] = loadImage("particle.png");
+  imgs[3] = loadImage("texture.png");
+  imgs[4] = loadImage("reflection.png");
+
   // Initialize box2d physics and create the world
   box2d = new Box2DProcessing(this);
   box2d.createWorld();
@@ -65,11 +72,17 @@ void setup() {
 void draw() {
   //blendMode(ADD);
   background(0);
+  if(showPanel){
+    cp5.setVisible(true);
+    uiPanel.draw();
+  }
+  else
+    cp5.setVisible(false);
 
   //particles
-  if(pss2.size() > 0)
+  if (pss2.size() > 0)
   {
-    for(ParticleSystem2 p2:pss2)
+    for (ParticleSystem2 p2 : pss2)
       p2.run();
   }
 
@@ -100,5 +113,5 @@ void draw() {
   spring.display();
 
   fill(255);
-  text("Space bar to toggle creature/skeleton.\nClick and drag the box.", 20, height-30);
+  text("Space bar to toggle creature/skeleton.\nClick and drag the box.\nPress s to hide uiPanel", 20, height-30);
 }

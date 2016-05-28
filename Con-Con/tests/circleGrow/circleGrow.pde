@@ -27,7 +27,7 @@ void draw(){
   ellipse(width/2,height/2,r,r);
   Ani.to(this, 5, "r", nextR);
   
-  if((r - 2) >= (nextR - 10) && (r + 2) <= (nextR + 10)){
+  if(((r - 2) >= (nextR - 10)) && ((r + 2) <= (nextR + 10))){
    nextR = random(50,200);
    nextC = color(random(255),random(255),random(255));
   }

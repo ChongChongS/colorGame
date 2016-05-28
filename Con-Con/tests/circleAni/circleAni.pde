@@ -10,7 +10,7 @@ void draw() {
   background(0);
   if (particleSystems.size() > 0)
   {
-    for (int i = 0;i < particleSystems.size() - 1;i++) {
+    for (int i = 0;i < particleSystems.size();i++) {
       particleSystems.get(i).run();
     }
   }
